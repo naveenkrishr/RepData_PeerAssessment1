@@ -61,9 +61,9 @@ library(lubridate)
 ```
 
 ```r
-plot(ymd(names(day_setps_tot)),as.vector(day_setps_tot),type = "h",lwd =5,col = "blue",xlab = "Days",ylab = "Total Steps")
-abline(h= mean(day_setps_tot),col = "red")
-abline(h= median(day_setps_tot),col = "green")
+hist(as.vector(day_setps_tot),breaks = 30,col = "blue")
+abline(v= mean(day_setps_tot),col = "red")
+abline(v= median(day_setps_tot),col = "green")
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
@@ -122,10 +122,10 @@ Ploatting a histogram
 ```r
 day_setps_tot <- tapply(raw_data_cleaned$steps,raw_data_cleaned$date,sum)
 
-plot(ymd(names(day_setps_tot)),as.vector(day_setps_tot),type = "h",lwd =5,col = "blue",xlab = "Days",ylab = "Total Steps")
 
-abline(h= mean(day_setps_tot),col = "red")
-abline(h= median(day_setps_tot),col = "green")
+hist(as.vector(day_setps_tot),breaks = 30,col = "blue")
+abline(v= mean(day_setps_tot),col = "red")
+abline(v= median(day_setps_tot),col = "green")
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
